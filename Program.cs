@@ -2,7 +2,7 @@
 
 namespace C_ArraysCollections
 {
-    class Program
+    class Programname
     {
         static void Main(string[] args)
         {
