@@ -42,8 +42,23 @@ namespace C_ArraysCollections
             string numbersAsString = string.Join(", ", numbers);
             Console.WriteLine("Array numbers: " + numbersAsString);
             string copyOfNumbersAsString = string.Join(", ", copyOfNumbers);
-            Console.WriteLine($"Array copyOfNumbers {copyOfNumbersAsString}");
+            Console.WriteLine($"Array copyOfNumbers: {copyOfNumbersAsString}");
 
-        }
+            int[] anotherCopy = new int[10];
+            copyOfNumbers.CopyTo(anotherCopy, 0);
+            Console.WriteLine("anotherCopy: " + string.Join(" ", anotherCopy));
+
+            Array.Reverse(anotherCopy);
+            Console.WriteLine($"anotherCopy reversed: {string.Join(" ", anotherCopy)}");
+
+            Array.Sort(anotherCopy);
+            Console.WriteLine($"anotherCopy sorted: {string.Join(" ", anotherCopy)}");
+
+            Array.Clear(anotherCopy);
+            Console.WriteLine($"anotherCopy cleared: {string.Join(" ", anotherCopy)}");
+
+
+
+            }
     }
 }
